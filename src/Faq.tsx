@@ -2,9 +2,15 @@ import plusIcon from "./assets/images/icon-plus.svg";
 import minusIcon from "./assets/images/icon-minus.svg";
 import { useEffect, useState } from "react";
 
-export const Faq = ({ faq, answer }) => {
+interface FaqProps {
+  id: number;
+  faq: string;
+  answer: string;
+}
+
+export const Faq = ({ faq, answer }: FaqProps) => {
   const [visible, setVisible] = useState(false);
-  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
+  const [, setIsKeyboardNavigation] = useState(false);
 
   const handleClickVisible = () => {
     setVisible(!visible);
